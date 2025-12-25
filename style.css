@@ -1,0 +1,168 @@
+:root {
+            --violet: #967197;
+            --purple: #e0c0ff;
+            --pink: #c588a7;
+            --amber: #F59E0B;
+            --emerald: #10B981;
+            --light-bg: #dcbfdc;
+            --card-bg: #f6edf9;
+            --text: #070b10;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b9adb9 0%, #FEF7FF 50%, #FFF8F0 100%);
+            margin: 0;
+            padding: 20px;
+            color: var(--text);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--violet), var(--purple));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .nav {
+            display: flex;
+            background: #545457;
+            border-bottom: 1px solid #E5E7EB;
+            color: #070b10;
+        }
+        
+        .nav button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition:var(--text);
+        }
+        
+        .nav button.active {
+            background: var(--violet);
+            color: white;
+        }
+        
+        .nav button:hover {
+            background: rgba(139, 92, 246, 0.1);
+        }
+        
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .mood-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .mood-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--violet);
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mood-btn:hover {
+            background: var(--violet);
+            color: white;
+        }
+        
+        .mood-btn.selected {
+            background: var(--violet);
+            color: white;
+        }
+        
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: inherit;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--violet), var(--purple));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .entry {
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            background: #FAF5FF;
+        }
+        
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .message.user {
+            background: linear-gradient(135deg, var(--pink), #F472B6);
+            color: white;
+            text-align: right;
+        }
+        
+        .message.aura {
+            background: linear-gradient(135deg, var(--violet), var(--purple));
+            color: white;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #FFFFFF;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
